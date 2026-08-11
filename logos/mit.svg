@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A31F34"/>
+      <stop offset="100%" stop-color="#A31F34" stop-opacity="0.82"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#g)"/>
+  <rect x="3" y="3" width="122" height="122" rx="25" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+  <text x="64" y="72" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="600" fill="#FFFFFF" letter-spacing="-1">MIT</text>
+</svg>
