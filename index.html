@@ -773,6 +773,14 @@ footer span { font-size: 10px; color: var(--comment); letter-spacing: 0.06em; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
+  /* hide the fixed nav on phones; desktop is untouched */
+  nav { display: none; }
+  #hero { padding-top: 24px; }
+
+  /* boot screen fits a narrow viewport */
+  #boot { padding: 24px; }
+  .boot-line { font-size: 11px; }
+
   section { padding: 36px 24px 28px; }
   .hero-top { flex-direction: column; gap: 24px; }
   .photo-wrap { align-self: center; }
@@ -789,7 +797,6 @@ footer span { font-size: 10px; color: var(--comment); letter-spacing: 0.06em; }
   #research .exp-year { grid-column: 1 / -1; }
   #research .exp-popup { left: 12px; right: 12px; }
   .awards-cols { grid-template-columns: 1fr; }
-  nav { padding: 12px 24px; }
   footer { padding: 14px 24px; }
 }
 </style>
@@ -1328,4 +1335,3 @@ document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
-
