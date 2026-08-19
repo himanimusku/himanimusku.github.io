@@ -12,18 +12,18 @@
 :root {
   --bg:        #fdf8f5;
   --bg2:       #faf4f0;
-  --rose:      #b56b7c;
-  --rose-dim:  #9a7080;
+  --rose:      #c47a8a;
+  --rose-dim:  #b58a94;
   --rose-faint:#f0dce0;
   --lav:       #8f3f4c;
-  --lav-light: #c48a94;
-  --lav-dim:   #b56b7c;
-  --cream:     #1a1014;
-  --muted:     #c9a0ac;
-  --comment:   #845f6a;
-  --border:    #e5d4cf;
-  --eq:        #dcc4c9;
-  --body:      #5c3f48;
+  --lav-light: #d4a0a8;
+  --lav-dim:   #c47a8a;
+  --cream:     #141414;
+  --muted:     #d8b0bc;
+  --comment:   #a08088;
+  --border:    #edddd8;
+  --eq:        #e8d0d4;
+  --body:      #4a3a40;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -151,12 +151,12 @@ section {
 .code-block { display: flex; flex-direction: column; gap: 0; font-family: 'JetBrains Mono', monospace; }
 .row { font-size: 14px; line-height: 1.85; display: flex; align-items: baseline; flex-wrap: wrap; }
 .arr { color: var(--rose);         margin-right: 10px; flex-shrink: 0; }
-.va  { color: #7a2434; }
+.va  { color: #1a1a1a; }
 .eq  { color: var(--comment);        margin: 0 8px; }
-.st  { color: var(--lav); }
-.nu  { color: #5c1828;        font-weight: 500; }
+.st  { color: var(--rose); }
+.nu  { color: var(--lav);        font-weight: 500; }
 .cm  { color: var(--comment);        font-size: 12px; margin-left: 10px; }
-.br  { color: #8a3a4a; }
+.br  { color: var(--rose-dim); }
 
 /* ── CRT PHOTO ── */
 .photo-wrap { position: relative; flex-shrink: 0; }
@@ -192,12 +192,12 @@ section {
 
 .scanlines {
   position:absolute;inset:0;
-  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(196,122,138,0.04) 2px,rgba(196,122,138,0.04) 4px);
+  background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(20,20,20,0.04) 2px,rgba(20,20,20,0.04) 4px);
   pointer-events:none;z-index:2;
 }
 .crt-flicker {
   position:absolute;inset:0;
-  background:rgba(196,122,138,0.02);
+  background:rgba(20,20,20,0.02);
   animation:flicker 5s step-end infinite;
   pointer-events:none;z-index:3;
 }
@@ -226,7 +226,7 @@ section {
 }
 .res-item:last-child { border-bottom: 0.5px solid var(--border); }
 .res-item:hover {
-  background: linear-gradient(90deg, rgba(196,122,138,0.06), rgba(240,220,224,0.25));
+  background: linear-gradient(90deg, rgba(20,20,20,0.06), rgba(236,234,230,0.25));
   transform: translateX(2px);
 }
 a.res-item:hover .res-title { color: var(--rose); }
@@ -246,9 +246,9 @@ a.res-item:hover .res-title { color: var(--rose); }
   object-fit: cover;
   box-shadow:
     0 1px 0 rgba(255,255,255,0.5) inset,
-    0 4px 14px rgba(163,85,95,0.12);
+    0 4px 14px rgba(20,20,20,0.12);
   background: var(--rose-faint);
-  border: 0.5px solid rgba(196,122,138,0.25);
+  border: 0.5px solid rgba(20,20,20,0.25);
 }
 .res-title { font-size: 19px; color: var(--cream); margin-bottom: 3px; font-weight: 500; }
 .res-org   { font-size: 15px; color: var(--rose-dim); }
@@ -260,7 +260,7 @@ a.res-item:hover .res-title { color: var(--rose); }
   border: 0.5px solid var(--border);
   color: var(--rose-dim); white-space: nowrap; letter-spacing: 0.05em;
   border-radius: 999px;
-  background: rgba(240,220,224,0.45);
+  background: rgba(236,234,230,0.45);
   align-self: center;
 }
 
@@ -324,7 +324,7 @@ a.res-item:hover .res-title { color: var(--rose); }
 }
 #research .exp-item:hover,
 #research .exp-item:focus-within {
-  background: linear-gradient(90deg, rgba(196,122,138,0.08), transparent 70%);
+  background: linear-gradient(90deg, rgba(20,20,20,0.08), transparent 70%);
   transform: translateX(3px);
   z-index: 50;
 }
@@ -333,7 +333,7 @@ a.res-item:hover .res-title { color: var(--rose); }
   background: var(--rose);
   border-color: var(--rose);
   transform: scale(1.15);
-  box-shadow: 0 0 0 3px var(--bg), 0 0 12px rgba(196,122,138,0.35);
+  box-shadow: 0 0 0 3px var(--bg), 0 0 12px rgba(20,20,20,0.35);
 }
 #research .exp-year {
   font-family: 'JetBrains Mono', monospace;
@@ -367,10 +367,10 @@ a.res-item:hover .res-title { color: var(--rose); }
   top: auto;
   padding: 18px 20px;
   border-radius: 14px;
-  border: 0.5px solid rgba(196,122,138,0.35);
+  border: 0.5px solid rgba(20,20,20,0.35);
   background:
-    radial-gradient(ellipse 90% 70% at 8% 0%, rgba(240,220,224,0.55), transparent 55%),
-    linear-gradient(165deg, #fffaf8 0%, #fdf6f3 55%, #f8ecee 100%);
+    radial-gradient(ellipse 90% 70% at 8% 0%, rgba(236,234,230,0.55), transparent 55%),
+    linear-gradient(165deg, #fbfbfa 0%, #f4f3f0 55%, #eceae6 100%);
   box-shadow: 0 -10px 40px rgba(30,20,24,0.12);
   opacity: 0;
   visibility: hidden;
@@ -444,20 +444,38 @@ a.res-item:hover .res-title { color: var(--rose); }
   gap: 14px;
   padding: 22px 20px;
   min-height: 220px;
-  border: 0.5px solid var(--border);
-  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  border: 0.5px solid rgba(30,20,24,0.08);
+  border-radius: 16px;
   background:
-    radial-gradient(ellipse 90% 70% at 10% 0%, rgba(240,220,224,0.55), transparent 55%),
-    linear-gradient(165deg, #fffaf8 0%, #fdf6f3 55%, #f8ecee 100%);
+    radial-gradient(ellipse 80% 55% at 0% 0%, rgba(255,255,255,1), transparent 58%),
+    radial-gradient(ellipse 70% 50% at 100% 100%, rgba(240,220,224,0.35), transparent 55%),
+    linear-gradient(165deg, #ffffff 0%, #fbf8f6 48%, #f4eeea 100%);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.9) inset,
+    0 10px 28px rgba(30,20,24,0.08),
+    0 2px 8px rgba(30,20,24,0.04);
   text-decoration: none;
   color: inherit;
   transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s;
   cursor: none;
 }
+.project-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,0.45) 0%, transparent 42%);
+}
+.project-tile:hover,
 a.project-tile:hover {
-  transform: translateY(-4px);
-  border-color: var(--rose-dim);
-  box-shadow: 0 12px 28px rgba(163,85,95,0.1);
+  transform: translateY(-6px);
+  border-color: rgba(196,122,138,0.35);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.95) inset,
+    0 18px 40px rgba(30,20,24,0.12),
+    0 6px 16px rgba(196,122,138,0.12);
 }
 .project-tile-top {
   display: flex;
@@ -469,6 +487,9 @@ a.project-tile:hover {
   width: 44px;
   height: 44px;
   border-radius: 12px;
+  background: #fff;
+  border: 0.5px solid #e6e6e6;
+  box-shadow: none;
 }
 .project-link-hint {
   font-family: 'JetBrains Mono', monospace;
@@ -497,6 +518,8 @@ a.project-tile:hover {
 .project-tile .res-tag {
   align-self: flex-start;
   margin-top: auto;
+  background: #f5f5f5;
+  color: #4a4a4a;
 }
 .project-tile.nolink {
   cursor: default;
@@ -541,7 +564,7 @@ a.bullet-item {
 }
 .bullet-item:hover {
   border-left-color: var(--rose);
-  background: rgba(196,122,138,0.04);
+  background: rgba(20,20,20,0.04);
   transform: translateX(5px);
 }
 .bullet-item:hover::before {
@@ -643,7 +666,7 @@ a.bullet-item:hover .bullet-main { color: var(--rose); }
 }
 .paper-row:hover .paper-shot {
   border-color: var(--rose-dim);
-  box-shadow: 0 14px 34px rgba(163,85,95,0.12);
+  box-shadow: 0 14px 34px rgba(20,20,20,0.12);
 }
 .paper-shot img {
   width: 100%;
@@ -910,7 +933,7 @@ footer span { font-size: 10px; color: var(--comment); letter-spacing: 0.06em; }
       <div class="exp-year">Jan 2026 – Present</div>
       <div>
         <div class="exp-title">Talos (YC F26)</div>
-        <div class="exp-org">Co-Founder · Pittsburgh, PA</div>
+        <div class="exp-org">Co-Founder · San Francisco, CA</div>
       </div>
       <div class="res-tag">IoT · ML</div>
       <div class="exp-popup">
@@ -918,7 +941,7 @@ footer span { font-size: 10px; color: var(--comment); letter-spacing: 0.06em; }
         <div class="exp-popup-company">Talos (YC F26)</div>
         <div class="exp-popup-meta">
           <span>Jan 2026 – Present</span>
-          <span>Pittsburgh, PA</span>
+          <span>San Francisco, CA</span>
         </div>
         <div class="exp-popup-desc">Improving predictive maintenance for power industry; Backed by Y Combinator ($500k funding) and Constellation Energy.</div>
       </div>
@@ -1169,7 +1192,7 @@ footer span { font-size: 10px; color: var(--comment); letter-spacing: 0.06em; }
 /* ══════════════════════════
    BOOT ANIMATION
 ══════════════════════════ */
-const ROSE = '#b56b7c', LAV = '#8f3f4c', MUT = '#c9a0ac', COM = '#845f6a', CRM = '#1a1014';
+const ROSE = '#c47a8a', LAV = '#8f3f4c', MUT = '#d8b0bc', COM = '#a08088', CRM = '#141414';
 
 function typeText(el, text, speed, cb) {
   let i = 0;
